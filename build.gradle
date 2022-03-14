@@ -1,0 +1,17 @@
+//group 'org.ted'
+//version '1.0-SNAPSHOT'
+
+allprojects {
+    repositories {
+        maven {
+            url "http://jcenter.bintray.com"
+            allowInsecureProtocol = true
+        }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    logger.quiet('Clean........................')
+    delete rootProject.buildDir
+}
